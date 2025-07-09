@@ -199,7 +199,15 @@ const loginPage = `
         <input type="password" id="password" name="password" required
           class="input-field w-full px-4 py-3 rounded-lg text-gray-700 focus:outline-none">
       </div>
-      
+      // if using synchronous loading, will be called once the DOM is ready
+turnstile.ready(function () {
+  turnstile.render("#example-container", {
+    sitekey: "0x4AAAAAABkcrdUFrAHqddWR",
+    callback: function (token) {
+      console.log(`Challenge Success ${token}`);
+    },
+  });
+});
       <button type="submit" 
         class="btn-primary w-full py-3 rounded-lg text-white font-medium focus:outline-none">
         <i class="fas fa-sign-in-alt mr-2"></i>登录
@@ -209,11 +217,6 @@ const loginPage = `
     </form>
   </div>
 <div style="display: block; flex-flow: row;">
-  <div
-    class="cf-turnstile"
-    data-sitekey="0x4AAAAAABkcrdUFrAHqddWR"
-    data-size="flexible"
-  ></div>
 </div>
   <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
