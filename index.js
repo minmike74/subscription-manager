@@ -144,10 +144,6 @@ const loginPage = `
   <title>订阅管理系统</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
-  defer
-></script>
   <style>
     .login-container {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -199,15 +195,6 @@ const loginPage = `
         <input type="password" id="password" name="password" required
           class="input-field w-full px-4 py-3 rounded-lg text-gray-700 focus:outline-none">
       </div>
-      // if using synchronous loading, will be called once the DOM is ready
-turnstile.ready(function () {
-  turnstile.render("#example-container", {
-    sitekey: "0x4AAAAAABkcrdUFrAHqddWR",
-    callback: function (token) {
-      console.log(`Challenge Success ${token}`);
-    },
-  });
-});
       <button type="submit" 
         class="btn-primary w-full py-3 rounded-lg text-white font-medium focus:outline-none">
         <i class="fas fa-sign-in-alt mr-2"></i>登录
