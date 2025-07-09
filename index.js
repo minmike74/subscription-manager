@@ -204,7 +204,11 @@ const loginPage = `
       <div id="errorMsg" class="text-red-500 text-center"></div>
     </form>
   </div>
-  
+<div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAABkcrdUFrAHqddWR"
+  data-callback="javascriptCallback"
+></div>
   <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
       e.preventDefault();
