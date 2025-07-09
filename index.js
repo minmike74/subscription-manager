@@ -144,7 +144,10 @@ const loginPage = `
   <title>订阅管理系统</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+  defer
+></script>
   <style>
     .login-container {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
